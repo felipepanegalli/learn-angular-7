@@ -1,25 +1,23 @@
-<h1>Lista de Empregados</h1>
-<table>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Nome</th>
-      <th>Salário</th>
-      <th>Bonus</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let employee of employeeService.employees; let i = index">
-      <td>{{ i + 1 }}</td>
-      <td>{{ employee.name }}</td>
-      <td>{{ employee.salary }}</td>
-      <td>{{ employee.bonus }}</td>
-      <!-- <td [innerHtml]="i + 1"></td>
-      <td [innerHtml]="employee.name"></td>
-      <td
-        [innerHtml]="employee.salary"
-        [style.color]="getSalaryColor(employee)"
-      ></td> -->
-    </tr>
-  </tbody>
-</table>
+<div class="container">
+  <div class="row">
+      <h1>Lista de Empregados</h1>
+      <table class="table table-striped table-sm">
+          <thead>
+          <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Salário</th>
+              <th>Bonus</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let employee of employeeService.employees; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{ employee.name }}</td>
+              <td>{{ employee.salary }}</td>
+              <td>{{ employee.bonus }}</td>
+          </tr>
+          </tbody>
+      </table>
+  </div>
+</div>
